@@ -27,7 +27,7 @@ const addImageFn = () => {
         divImg.className = 'p-4';
         img.className = 'mx-auto';
         img.width = 320;
-        img.src = url
+        img.dataset.src = url
 
         registerImage(divImg);
 

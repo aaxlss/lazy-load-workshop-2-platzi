@@ -4,8 +4,12 @@ const isIntersecting = (entry) => {
 }
 
 const action = (entry) => {
-    const nodo = entry.target;
-    observer.unobserve(nodo)
+    const imgContainer = entry.target;
+    const img = imgContainer.firstChild;
+    const url = img.dataset.src;
+    img.src = url;
+    
+    observer.unobserve(imgContainer);
 }
 
 const observer = new IntersectionObserver((entries) =>{
