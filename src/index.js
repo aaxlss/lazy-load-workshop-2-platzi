@@ -2,7 +2,7 @@
  * This file is just a silly example to show everything working in the browser.
  * When you're ready to start on your site, clear the file. Happy hacking!
  **/
-
+import {registerImage} from './lazy.js'
 console.log('Happy hacking :)')
 //URL info
 const baseURL = 'https://randomfox.ca/'
@@ -28,6 +28,8 @@ const addImageFn = () => {
         img.className = 'mx-auto';
         img.width = 320;
         img.src = url
+
+        registerImage(divImg);
 
         divImg.append(img);
         images.append(divImg)
