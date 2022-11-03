@@ -7,7 +7,11 @@ const action = (entry) => {
     const imgContainer = entry.target;
     const img = imgContainer.firstChild;
     const url = img.dataset.src;
-    img.src = url;
+    
+    setTimeout(() => {
+        imgContainer.className = 'p-4';
+        img.src = url;
+    }, 1000);
     
     observer.unobserve(imgContainer);
 }
